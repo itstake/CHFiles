@@ -17,3 +17,9 @@ Latest release: [v1.0.3](https://github.com/macjuul/CHFiles/releases/tag/v1.0.3)
 * **write_file(PathToFile, content, [mode])** - Write text to a file. mode is optional, can be OVERWRITE or APPEND
 
 * **file_exists(Path)** - Check if a file exists, returns true or false
+
+* **create_dir(PathToDir)** - Create a new directory
+
+* **is_dir(PathToFile)** - if a file is directory, return true.
+
+* **is_file(PathToFile)** - if a file is not file, return false.
