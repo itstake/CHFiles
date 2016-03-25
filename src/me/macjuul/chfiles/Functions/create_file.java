@@ -51,11 +51,7 @@ public class create_file extends AbstractFunction {
             if(loc.exists()) {
                 throw new CREIOException(loc.getAbsolutePath() + "Already Exists", t);
             }
-            if(args.length == 2) {
-                FileUtil.write(args[1].val(), loc, true);
-            } else {
-                FileUtil.write("", loc, true);
-            }
+            loc.createNewFile();
             return CVoid.VOID;
         } catch (IOException e) {
             throw new CREIOException("File could not be created.", t);

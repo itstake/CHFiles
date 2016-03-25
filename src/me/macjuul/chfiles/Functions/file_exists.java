@@ -15,6 +15,7 @@ import com.laytonsmith.core.exceptions.CRE.CREThrowable;
 import com.laytonsmith.core.exceptions.ConfigRuntimeException;
 import com.laytonsmith.core.functions.AbstractFunction;
 import com.laytonsmith.libs.org.apache.commons.io.FileUtils;
+import org.bukkit.Bukkit;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,6 +48,7 @@ public class file_exists extends AbstractFunction {
         if(!Security.CheckSecurity(loc)) {
             throw new CRESecurityException("You do not have permission to access the file '" + loc.getAbsolutePath() + "'", t);
         }
+        Bukkit.broadcastMessage(loc.toString());
         return CBoolean.get(loc.exists());
     }
 
