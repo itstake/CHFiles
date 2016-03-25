@@ -59,13 +59,13 @@ public class write_file extends AbstractFunction {
 
             return CVoid.VOID;
         } catch (IOException e) {
-            throw new CREIOException("File could not be created.", t);
+            throw new CREIOException("File could not be writed.", t);
         }
     }
 
     @Override
     public String getName() {
-        return "create_file";
+        return "write_file";
     }
 
     @Override
