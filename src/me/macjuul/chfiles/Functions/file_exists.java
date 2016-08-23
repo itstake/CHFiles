@@ -48,7 +48,6 @@ public class file_exists extends AbstractFunction {
         if(!Security.CheckSecurity(loc)) {
             throw new CRESecurityException("You do not have permission to access the file '" + loc.getAbsolutePath() + "'", t);
         }
-        Bukkit.broadcastMessage(loc.toString());
         return CBoolean.get(loc.exists());
     }
 
