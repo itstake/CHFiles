@@ -1,6 +1,6 @@
 CHFiles is a CommandHelper extension that allows you to work with files and directory and interact with them from whithin your server.
 
-Latest release: [v2.1.2](https://github.com/itstake/CHFiles/releases/tag/v2.1.2)
+Latest release: [v2.2.2](https://github.com/steakteam/CHFiles/releases/latest)
 
 # Functions:
 
@@ -14,7 +14,11 @@ Latest release: [v2.1.2](https://github.com/itstake/CHFiles/releases/tag/v2.1.2)
 
 * **rename_file(PathToFile)** - Rename a file
 
-* **write_file(PathToFile, content, [mode])** - Write text to a file. mode is optional, can be OVERWRITE or APPEND
+* **write_file(PathToFile, content, [mode])** - Write text to a file. mode is optional, can be OVERWRITE or APPEND.
+
+* **async_write_file(PathToFile, content, [mode], [callback])** - Write text to a file asynchronously. mode is optional, can be OVERWRITE or APPEND.
+
+* **async_read_file(PathToFile, callback)** - Asynchronously reads in a file. check [here](http://wiki.sk89q.com/wiki/CommandHelper/Staged/API/async_read)
 
 * **file_exists(Path)** - Check if a file exists, returns true or false
 
@@ -23,3 +27,7 @@ Latest release: [v2.1.2](https://github.com/itstake/CHFiles/releases/tag/v2.1.2)
 * **is_dir(PathToFile)** - if a file is directory, return true.
 
 * **is_file(PathToFile)** - if a file is not file, return false.
+
+* **get_absolute_path([Path])** - Returns the absolute path.
+
+* **ungz_file(gzFile, File)** - ungz the file.
